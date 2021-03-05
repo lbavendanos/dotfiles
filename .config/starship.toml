@@ -1,0 +1,3 @@
+[character]
+success_symbol = "[\uf0e7](bold yellow)"
+error_symbol = "[\uf0e7](bold red)"
