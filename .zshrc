@@ -120,3 +120,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Temporary hack for nvim tree sitter until PR is merged
+# https://github.com/neovim/neovim/pull/14197
+ulimit -n 10240
