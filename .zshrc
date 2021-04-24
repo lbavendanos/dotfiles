@@ -120,3 +120,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#  JENV
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
