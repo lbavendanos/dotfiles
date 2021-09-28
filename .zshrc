@@ -126,3 +126,4 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 alias luamake=/Users/lbavendanos/.config/nvim/.lsp/lua-language-server/3rd/luamake/luamake
+alias lg=lazygit
