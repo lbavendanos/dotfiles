@@ -72,10 +72,12 @@ eval "$(starship init zsh)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
+  git
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim $HOME/.zshrc"
 alias ohmyzsh="cd $HOME/.oh-my-zsh && nvim && 1"
 alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
-alias sail='bash vendor/bin/sail'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Language
 export LC_ALL=en_US.UTF-8
