@@ -9,9 +9,6 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  # - ~/.config/alacritty/themes/catppuccin/catppuccin-mocha.yml
-  # - ~/.config/alacritty/themes/kanagawa/kanagawa.yml
-  # - ~/.config/alacritty/themes/nightfox/duskfox.yml
   - ~/.config/alacritty/themes/kanagawa/kanagawa-dragon.yml
 
 # Any items in the `env` entry below will be added as
