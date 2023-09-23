@@ -17,3 +17,5 @@ shell:
     - -l
     - -c
     - "tmux attach || tmux new -s  "
+mouse:
+  hide_when_typing: true
