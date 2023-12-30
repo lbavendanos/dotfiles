@@ -1,0 +1,21 @@
+import = ["/Users/lbavendanos/.config/alacritty/themes/kanagawa/kanagawa-dragon.toml"]
+
+[colors.primary]
+background = "#000000"
+
+[env]
+TERM = "xterm-256color"
+
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux new -s  "]
+program = "/opt/homebrew/bin/zsh"
+
+[window]
+option_as_alt = "Both"
