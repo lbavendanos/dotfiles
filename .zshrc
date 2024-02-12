@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim $HOME/.zshrc"
 alias ohmyzsh="cd $HOME/.oh-my-zsh && nvim && 1"
 alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 # Language
 export LC_ALL=en_US.UTF-8
