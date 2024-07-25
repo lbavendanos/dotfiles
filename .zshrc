@@ -109,6 +109,7 @@ alias zshconfig="nvim $HOME/.zshrc"
 alias ohmyzsh="cd $HOME/.oh-my-zsh && nvim && 1"
 alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias lg=lazygit
 
 # Language
 export LC_ALL=en_US.UTF-8
@@ -123,4 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias lg=lazygit
+# MYSQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
