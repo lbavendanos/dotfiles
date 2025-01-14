@@ -129,3 +129,7 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # POSTGRES
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# HOMEBREW
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ENV_HINTS=1
