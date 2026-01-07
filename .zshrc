@@ -101,14 +101,7 @@ export NVM_DIR="$HOME/.nvm"
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# function nvims() {
-#     NVIM_APPNAME="$(
-#         find -L "${XDG_CONFIG_HOME:-$HOME/.config}" -mindepth 2 -maxdepth 2 -name init.lua -o -name init.vim \
-#         | awk -F/ '{print $(NF-1)}' \
-#         | fzf --prompt ' Neovim Config  ' --height=~50% --layout=reverse --border)" \
-#     nvim
-# }
-
+# NVIM multi-config selector
 function nvims() {
   config=$(
         find -L "${XDG_CONFIG_HOME:-$HOME/.config}" -mindepth 2 -maxdepth 2 -name init.lua -o -name init.vim \
@@ -120,7 +113,7 @@ function nvims() {
     return 0
   fi
 
-  NVIM_APPNAME=$config nvim $@
+  NVIM_APPNAME=$config nvim "$@"
 }
 
-alias claude="/opt/homebrew/bin/claude" 
+alias claude="/opt/homebrew/bin/claude"
