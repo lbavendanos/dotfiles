@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -84,21 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -111,11 +93,6 @@ alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias lg=lazygit
 
-# Language
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -124,12 +101,26 @@ export NVM_DIR="$HOME/.nvm"
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# MYSQL
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+# function nvims() {
+#     NVIM_APPNAME="$(
+#         find -L "${XDG_CONFIG_HOME:-$HOME/.config}" -mindepth 2 -maxdepth 2 -name init.lua -o -name init.vim \
+#         | awk -F/ '{print $(NF-1)}' \
+#         | fzf --prompt ' Neovim Config  ' --height=~50% --layout=reverse --border)" \
+#     nvim
+# }
 
-# POSTGRES
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+function nvims() {
+  config=$(
+        find -L "${XDG_CONFIG_HOME:-$HOME/.config}" -mindepth 2 -maxdepth 2 -name init.lua -o -name init.vim \
+        | awk -F/ '{print $(NF-1)}' \
+        | fzf --prompt ' Neovim Config  ' --height=~50% --layout=reverse --border)
 
-# HOMEBREW
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ENV_HINTS=1
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  fi
+
+  NVIM_APPNAME=$config nvim $@
+}
+
+alias claude="/opt/homebrew/bin/claude" 

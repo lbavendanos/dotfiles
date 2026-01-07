@@ -1,0 +1,107 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "pureBlack": "#000000",
+    "panelBlack": "#050505",
+    "elementBlack": "#0A0A0A",
+
+    "fujiWhite": "#DCD7BA",
+    "oldWhite": "#C8C093",
+    "fujiGray": "#727169",
+    "katanaGray": "#717C7C",
+
+    "dragonBlack0": "#0D0C0C",
+    "dragonBlack1": "#12120F",
+    "dragonBlack2": "#1D1C19",
+    "dragonBlack3": "#181616",
+    "dragonBlack4": "#282727",
+    "dragonBlack5": "#393836",
+
+    "dragonRed": "#C4746E",
+    "dragonBlue": "#658594",
+    "dragonGreen": "#8A9A7B",
+    "dragonAqua": "#8EA4A2",
+    "dragonOrange": "#B6927B",
+    "dragonPink": "#A292A3",
+
+    "springBlue": "#7FB4CA",
+    "crystalBlue": "#7E9CD8",
+    "oniViolet": "#957FB8",
+    "sakuraPink": "#D27E99",
+    "springGreen": "#98BB6C",
+    "carpYellow": "#E6C384",
+    "roninYellow": "#FF9E3B",
+    "samuraiRed": "#E82424",
+    "peachRed": "#FF5D62",
+    "surimiOrange": "#FFA066",
+
+    "autumnGreen": "#76946A",
+    "autumnRed": "#C34043",
+
+    "winterGreen": "#2B3328",
+    "winterRed": "#43242B",
+    "winterBlue": "#252535",
+    "winterYellow": "#49443C"
+  },
+  "theme": {
+    "primary": "dragonBlue",
+    "secondary": "springBlue",
+    "accent": "dragonGreen",
+
+    "error": "samuraiRed",
+    "warning": "roninYellow",
+    "success": "dragonGreen",
+    "info": "dragonAqua",
+
+    "text": "fujiWhite",
+    "textMuted": "fujiGray",
+
+    "background": "pureBlack",
+    "backgroundPanel": "panelBlack",
+    "backgroundElement": "elementBlack",
+
+    "border": "dragonBlack5",
+    "borderSubtle": "dragonBlack4",
+    "borderActive": "dragonBlue",
+
+    "diffAdded": "autumnGreen",
+    "diffRemoved": "autumnRed",
+    "diffContext": "fujiGray",
+    "diffHunkHeader": "katanaGray",
+    "diffHighlightAdded": "springGreen",
+    "diffHighlightRemoved": "peachRed",
+
+    "diffAddedBg": "winterGreen",
+    "diffRemovedBg": "winterRed",
+    "diffContextBg": "panelBlack",
+
+    "diffLineNumber": "dragonBlack5",
+    "diffAddedLineNumberBg": "winterGreen",
+    "diffRemovedLineNumberBg": "winterRed",
+
+    "markdownText": "fujiWhite",
+    "markdownHeading": "crystalBlue",
+    "markdownLink": "springBlue",
+    "markdownLinkText": "dragonAqua",
+    "markdownCode": "springGreen",
+    "markdownBlockQuote": "fujiGray",
+    "markdownEmph": "dragonOrange",
+    "markdownStrong": "carpYellow",
+    "markdownHorizontalRule": "dragonBlack5",
+    "markdownListItem": "dragonBlue",
+    "markdownListEnumeration": "dragonOrange",
+    "markdownImage": "roninYellow",
+    "markdownImageText": "fujiWhite",
+    "markdownCodeBlock": "panelBlack",
+
+    "syntaxComment": "fujiGray",
+    "syntaxKeyword": "oniViolet",
+    "syntaxFunction": "crystalBlue",
+    "syntaxVariable": "fujiWhite",
+    "syntaxString": "springGreen",
+    "syntaxNumber": "carpYellow",
+    "syntaxType": "dragonAqua",
+    "syntaxOperator": "surimiOrange",
+    "syntaxPunctuation": "katanaGray"
+  }
+}
