@@ -1,3 +1,6 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -86,20 +89,84 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Aliases
-alias zshconfig="nvim $HOME/.zshrc"
-alias ohmyzsh="cd $HOME/.oh-my-zsh && nvim && 1"
-alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-alias lg=lazygit
+# Language
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# Editor
+export EDITOR="nvim"
+
+# Path base
+export PATH="$HOME/.local/bin:$PATH"
+
+# MYSQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# POSTGRES
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# COMPOSER
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# HOMEBREW
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ENV_HINTS=1
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# FZF configuration (use fd)
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type d --strip-cwd-prefix --hidden --follow --exclude .git"
+
+# FZF Kanagawa Dragon theme + options
+export FZF_DEFAULT_OPTS="
+  --height=80%
+  --layout=reverse
+  --border=rounded
+  --info=inline
+  --margin=1
+  --padding=1
+  --color=fg:#c5c9c5,bg:#000000,hl:#c4b28a
+  --color=fg+:#c5c9c5,bg+:#0A0A0A,hl+:#b6927b
+  --color=info:#8ba4b0,prompt:#8ea4a2,pointer:#c4746e
+  --color=marker:#87a987,spinner:#8992a7,header:#a6a69c
+  --color=border:#625e5a,gutter:#000000
+"
+
+# FZF Ctrl+T: file search with bat preview
+export FZF_CTRL_T_OPTS="
+  --preview 'bat --color=always --style=numbers --line-range=:500 {}'
+  --preview-window 'right:60%:border-left'
+  --bind 'ctrl-/:toggle-preview'
+"
+
+# FZF Alt+C: directory search with eza preview
+export FZF_ALT_C_OPTS="
+  --preview 'eza --tree --color=always --icons --level=2 {} | head -200'
+  --preview-window 'right:50%:border-left'
+"
+
+# FZF Ctrl+R: history search
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}'
+  --preview-window 'down:3:wrap'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+"
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# BAT
+export BAT_THEME="kanagawa-dragon"
+
+# Load local secrets (NOT committed)
+# Create ~/.zshenv.local and put API keys there
+[ -f "$HOME/.zshenv.local" ] && source "$HOME/.zshenv.local"
 
 # NVIM multi-config selector
 function nvims() {
@@ -116,4 +183,7 @@ function nvims() {
   NVIM_APPNAME=$config nvim "$@"
 }
 
+# Aliases
+alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias claude="/opt/homebrew/bin/claude"
