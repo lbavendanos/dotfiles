@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code when working with this repository.
 
+## Before You Start
+
+**Always consult Context7 MCP before making changes.** When adding or modifying tool configurations, use Context7 to query the official documentation of the tools involved. This ensures configurations follow current best practices and use up-to-date APIs.
+
 ## Repository Overview
 
 Personal dotfiles repository for macOS development environment. Manages terminal tools, shell configuration, and editor settings with vim-style keybindings and a consistent Kanagawa Dragon theme.
@@ -22,5 +26,4 @@ Always use colors from this reference to maintain visual consistency.
 
 ## Key Patterns
 
-- Use **Context7 MCP** for up-to-date documentation when adding or modifying configurations and tools.
 - Prefer **vim-style keybindings** in all tools that support them to maintain muscle memory consistency.
