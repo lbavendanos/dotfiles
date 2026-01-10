@@ -20,11 +20,7 @@ This repository uses **Kanagawa Dragon** as the unified color theme. When config
 
 Always use colors from this reference to maintain visual consistency.
 
-## Documentation Lookup
+## Key Patterns
 
-When you need up-to-date documentation for any library or tool, use **Context7 MCP**:
-
-1. `mcp__context7__resolve-library-id` - Resolve library name to Context7 ID
-2. `mcp__context7__query-docs` - Query documentation with specific questions
-
-Use Context7 especially when configuring new tools, working with APIs, or troubleshooting version-specific issues.
+- Use **Context7 MCP** for up-to-date documentation when adding or modifying configurations and tools.
+- Prefer **vim-style keybindings** in all tools that support them to maintain muscle memory consistency.
