@@ -131,7 +131,6 @@ function nvims() {
 
 alias dotfiles="cd $HOME/.dotfiles && nvim && 1"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-alias claude="/opt/homebrew/bin/claude"
 
 # Eza
 alias ls="eza --icons"
