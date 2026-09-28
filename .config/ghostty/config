@@ -1,0 +1,18 @@
+# Theme (Kanagawa Dragon) with pure black background override
+theme = kanagawa-dragon
+background = #000000
+
+# Font
+font-family = "JetBrainsMono Nerd Font Mono"
+
+# Mouse
+mouse-hide-while-typing = true
+
+# macOS
+macos-option-as-alt = true
+
+# Shell: attach to tmux or start a new session
+command = /opt/homebrew/bin/zsh -l -c "tmux attach || tmux new -s  "
+
+# Forward TERM/terminfo over SSH so xterm-ghostty works on remote hosts
+shell-integration-features = ssh-env,ssh-terminfo
