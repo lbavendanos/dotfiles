@@ -3,6 +3,7 @@ background = #000000
 
 font-family = "JetBrainsMono NF"
 font-size = 11
+font-style = "Regular"
 
 mouse-hide-while-typing = true
 macos-option-as-alt = true
