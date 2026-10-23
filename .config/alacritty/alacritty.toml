@@ -13,6 +13,7 @@ style = "Regular"
 hide_when_typing = true
 
 [terminal.shell]
+args = ["-l", "-c", "tmux attach || tmux new -s  "]
 program = "/opt/homebrew/bin/zsh"
 
 [window]
